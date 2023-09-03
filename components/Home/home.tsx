@@ -289,7 +289,7 @@ const Home = () => {
   };
 
   const generateBuiltInSystemPrompts = useCallback(() => {
-    const vendors: AiModel['vendor'][] = ['Anthropic', 'OpenAI', 'Google'];
+    const vendors: AiModel['vendor'][] = ['Anthropic', 'SingularityAI', 'Google'];
 
     const newSystemPrompts: SystemPrompt[] = [];
     for (const vendor of vendors) {
@@ -306,13 +306,13 @@ const Home = () => {
             .map((m) => m.id),
         };
         newSystemPrompts.push(systemPrompt);
-      } else if (vendor === 'OpenAI') {
+      } else if (vendor === 'SingularityAI') {
         systemPrompt = {
           id: systemPromptId,
           name: `${vendor} Built-In`,
           content: DEFAULT_OPENAI_SYSTEM_PROMPT,
           folderId: null,
-          models: models.filter((m) => m.vendor === 'OpenAI').map((m) => m.id),
+          models: models.filter((m) => m.vendor === 'SingularityAI').map((m) => m.id),
         };
         newSystemPrompts.push(systemPrompt);
       } else if (vendor === 'Google') {
@@ -559,8 +559,8 @@ const Home = () => {
                 className="animate-bounce"
                 width={256}
                 height={256}
-                src="/icon-256.svg"
-                alt="unSAGED Logo"
+                src="/icon-256.png"
+                alt="Singularity Logo"
                 priority
               />
             </div>

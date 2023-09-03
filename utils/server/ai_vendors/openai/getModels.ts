@@ -12,7 +12,7 @@ export const config = {
   runtime: 'edge',
 };
 
-export async function getAvailableOpenAIModels(key?: string) {
+export async function getAvailableSingularityAIModels(key?: string) {
   let url = `${OPENAI_API_URL}/models`;
   if (OPENAI_API_TYPE === 'azure') {
     url = `${OPENAI_API_URL}/openai/deployments?api-version=${OPENAI_API_VERSION}`;
@@ -28,7 +28,7 @@ export async function getAvailableOpenAIModels(key?: string) {
       }),
       ...(OPENAI_API_TYPE === 'openai' &&
         OPENAI_ORGANIZATION && {
-          'OpenAI-Organization': OPENAI_ORGANIZATION,
+          'SingularityAI-Organization': OPENAI_ORGANIZATION,
         }),
     },
   });

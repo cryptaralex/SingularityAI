@@ -33,7 +33,7 @@ export const SystemPromptSelect = () => {
     let model = selectedConversation!.model;
 
     if (!model || model.vendor === undefined) {
-      selectedConversation!.model = PossibleAiModels['gpt-3.5-turbo'];
+      selectedConversation!.model = PossibleAiModels['Ophelia'];
       model = selectedConversation!.model;
     }
 
@@ -64,11 +64,12 @@ export const SystemPromptSelect = () => {
 
   const getAvailableSystemPrompts = useCallback(() => {
     const model = selectedConversation!.model;
+    
 
     const availablePrompts = systemPrompts.filter((prompt) =>
       prompt.models.includes(model.id),
     );
-
+    console.log(model.id);
     const defaultSystemPrompt = builtInSystemPrompts.filter(
       (prompt) => prompt.name === `${model?.vendor} Built-In`,
     )[0];

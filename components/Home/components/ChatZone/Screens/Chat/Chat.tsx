@@ -204,7 +204,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
         {models.length === 0 ? (
           <div className="mx-auto flex h-full w-[300px] flex-col justify-center space-y-6 sm:w-[600px]">
             <div className="text-center text-4xl font-bold text-black dark:text-white">
-              Welcome to unSAGED
+              Welcome to Singularity
             </div>
           </div>
         ) : modelError ? (
@@ -228,7 +228,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                           w-fit bg-[#e7eaf5] dark:bg-[#1b1f23] rounded-2xl px-2 py-1 shadow-xl"
                       >
                         <Image
-                          src="./icon-64.svg"
+                          src="/icon-64.png"
                           height={64}
                           width={64}
                           alt="logo"
@@ -239,7 +239,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                           dark:from-fuchsia-500 dark:via-violet-600 dark:to-indigo-400
                           bg-clip-text bg-175% animate-bg-pan-fast rotate-0"
                         >
-                          <div className="text-5xl font-semibold">unSAGED</div>
+                          <div className="text-4xl font-semibold">Singularity</div>
                         </div>
                       </div>
                     </div>

@@ -8,7 +8,7 @@ import { Message } from '@/types/chat';
 // import { Tiktoken, init } from '@dqbd/tiktoken/lite/init';
 
 // TODO: Fix tokenizer. Not working with app dir.
-export async function countTokensOpenAI(
+export async function countTokensSingularityAI(
   model: AiModel,
   systemPrompt: string,
   messages: Message[],
