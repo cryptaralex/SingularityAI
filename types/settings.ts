@@ -59,31 +59,31 @@ export const SystemSettings: SettingsSection[] = [
       },
     ],
   },
-  //  {
-  //   id: 'singularityai',
-  //  name: 'SingularityAI',
-  //    settings: [
-  // //     {
-  // //       id: 'api_key',
-  //       name: 'API Key',
-  //       description: 'The API key to use for SingularityAI models.',
-  //       type: 'string',
-  //       storage: 'local',
-  //     },
-      //  {
-      //   id: 'Ophelia_default_system_prompt',
-      //    name: 'Ophelia Default System Prompt',
-      //    description: 'The default system prompt to use for Ophelia.',
+  {
+    id: 'openai',
+    name: 'OpenAI',
+    settings: [
+      {
+        id: 'api_key',
+        name: 'API Key',
+        description: 'The API key to use for OpenAI models.',
+        type: 'string',
+        storage: 'local',
+      },
+      // {
+      //   id: 'gpt-3.5-turbo_default_system_prompt',
+      //   name: 'GPT-3.5 Default System Prompt',
+      //   description: 'The default system prompt to use for GPT-3.5.',
       //   type: 'choice',
-      //  choices: [
-      //    {
+      //   choices: [
+      //     {
       //       name: 'Default',
       //       value: 'default',
       //     },
       //   ],
-      //    storage: 'local',
-      //  },
-      // // {
+      //   storage: 'local',
+      // },
+      // {
       //   id: 'gpt-4_default_system_prompt',
       //   name: 'GPT-4 Default System Prompt',
       //   description: 'The default system prompt to use for GPT-4.',
@@ -96,20 +96,20 @@ export const SystemSettings: SettingsSection[] = [
       //   ],
       //   storage: 'local',
       // },
-  //   ],
-  // },
-  // {
-  //   id: 'anthropic',
-  //   name: 'Anthropic',
-  //   settings: [
-  //     {
-  //       id: 'api_key',
-  //       name: 'API Key',
-  //       description: 'The API key to use for Anthropic models.',
-  //       type: 'string',
-  //       storage: 'local',
-  //     },
-  //     // {
+    ],
+  },
+  {
+    id: 'anthropic',
+    name: 'Anthropic',
+    settings: [
+      {
+        id: 'api_key',
+        name: 'API Key',
+        description: 'The API key to use for Anthropic models.',
+        type: 'string',
+        storage: 'local',
+      },
+      // {
       //   id: 'claude-v1_default_system_prompt',
       //   name: 'Claude V1 Default System Prompt',
       //   description: 'The default system prompt to use for Claude V1.',
@@ -162,21 +162,21 @@ export const SystemSettings: SettingsSection[] = [
       //   ],
       //   storage: 'local',
       // },
-  //   ],
-  // },
-  // {
-  //   id: 'google',
-  //   name: 'Google',
-  //   settings: [
-  //     {
-  //       id: 'api_key',
-  //       name: 'API Key',
-  //       description: 'The API key to use for PaLM 2 models.',
-  //       type: 'string',
-  //       storage: 'local',
-  //     },
-  //     // {
-  //     //   id: 'claude-v1_default_system_prompt',
+    ],
+  },
+  {
+    id: 'google',
+    name: 'Google',
+    settings: [
+      {
+        id: 'api_key',
+        name: 'API Key',
+        description: 'The API key to use for PaLM 2 models.',
+        type: 'string',
+        storage: 'local',
+      },
+      // {
+      //   id: 'claude-v1_default_system_prompt',
       //   name: 'Claude V1 Default System Prompt',
       //   description: 'The default system prompt to use for Claude V1.',
       //   type: 'choice',
@@ -228,6 +228,6 @@ export const SystemSettings: SettingsSection[] = [
       //   ],
       //   storage: 'local',
       // },
- //  ],
-// },
+    ],
+  },
 ];

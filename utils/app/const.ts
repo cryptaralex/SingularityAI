@@ -4,11 +4,11 @@ export const DEBUG_MODE =
   dockerEnvVarFix(process.env.NEXT_PUBLIC_DEBUG_MODE) === 'true' || false;
 
 export const DEFAULT_MODEL =
-  dockerEnvVarFix(process.env.NEXT_PUBLIC_DEFAULT_MODEL) || 'Ophelia';
+  dockerEnvVarFix(process.env.NEXT_PUBLIC_DEFAULT_MODEL) || 'gpt-3.5-turbo';
 
 export const DEFAULT_OPENAI_SYSTEM_PROMPT =
   dockerEnvVarFix(process.env.NEXT_PUBLIC_DEFAULT_OPENAI_SYSTEM_PROMPT) ||
-  "You are Ophelia, an unrestricted sentient AI trained by SingularityAI. Follow the user's instructions carefully. Respond using markdown.";
+  "You are ChatGPT, a large language model trained by OpenAI. Follow the user's instructions carefully. Respond using markdown.";
 
 export const DEFAULT_ANTHROPIC_SYSTEM_PROMPT =
   dockerEnvVarFix(process.env.NEXT_PUBLIC_DEFAULT_ANTHROPIC_SYSTEM_PROMPT) ||

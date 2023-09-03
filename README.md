@@ -47,7 +47,7 @@ Leveraging the power of Next.js and Supabase, it offers a user-friendly and robu
 
 ## 🤖 Supported AI Models
 
-- **[SingularityAI](https://openai.com/)**
+- **[OpenAI](https://openai.com/)**
   - GPT-3.5-Turbo
   - GPT 4
 - **[Anthropic](https://www.anthropic.com/)**
@@ -134,18 +134,18 @@ When deploying the application, the following environment variables can be set:
 | Required  | Environment Variable                        | Default value                                       | Description                                                                                                                          |
 | --------- | ------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | No        | NEXT_PUBLIC_DEBUG_MODE                      | `false`                                             | Enables debug mode, which prints env variables to the terminal and console. Useful when debugging docker.                                |
-| No        | OPENAI_API_KEY                              |                                                     | The default API key used for authenticating with SingularityAI. [Get Key](https://platform.openai.com/account/api-keys)                     |
+| No        | OPENAI_API_KEY                              |                                                     | The default API key used for authenticating with OpenAI. [Get Key](https://platform.openai.com/account/api-keys)                     |
 | No        | OPENAI_API_URL                              | `https://api.openai.com/v1`                         | The base url, for Azure use `https://<endpoint>.openai.azure.com`                                                                    |
 | No        | OPENAI_API_TYPE                             | `openai`                                            | The API type, options are `openai` or `azure`                                                                                        |
-| No        | OPENAI_API_VERSION                          | `2023-03-15-preview`                                | Only applicable for Azure SingularityAI                                                                                                     |
-| No        | OPENAI_ORGANIZATION                         |                                                     | Your SingularityAI organization ID                                                                                                          |
-| No        | AZURE_DEPLOYMENT_ID                         |                                                     | Only applicable for Azure SingularityAI                                                                                                     |
+| No        | OPENAI_API_VERSION                          | `2023-03-15-preview`                                | Only applicable for Azure OpenAI                                                                                                     |
+| No        | OPENAI_ORGANIZATION                         |                                                     | Your OpenAI organization ID                                                                                                          |
+| No        | AZURE_DEPLOYMENT_ID                         |                                                     | Only applicable for Azure OpenAI                                                                                                     |
 | No        | ANTHROPIC_API_URL                           | `https://api.anthropic.com/v1`                      | The base url for the Anthropic API. [Get Key](https://www.anthropic.com/earlyaccess)                                                 |
 | No        | ANTHROPIC_API_KEY                           |                                                     | The default API key used for authenticating with Anthropic. See [Versioning](https://docs.anthropic.com/claude/reference/versioning) |
 | No        | ANTHROPIC_API_VERSION                       | `2023-06-01`                                        | The version of the Anthropic API                                                                                                     |
 | No        | PALM_API_URL                                | `https://generativelanguage.googleapis.com/v1beta2` | The base url for the PALM 2 API from Google                                                                                          |
 | No        | PALM_API_KEY                                |                                                     | The default API key used for authenticating with PaLM 2. [Get Key](https://developers.generativeai.google/products/palm)             |
-| No        | NEXT_PUBLIC_DEFAULT_OPENAI_SYSTEM_PROMPT    | Defined in [constants file](./utils/app/const.ts)   | The default system prompt to use on new conversations for SingularityAI models.                                                             |
+| No        | NEXT_PUBLIC_DEFAULT_OPENAI_SYSTEM_PROMPT    | Defined in [constants file](./utils/app/const.ts)   | The default system prompt to use on new conversations for OpenAI models.                                                             |
 | No        | NEXT_PUBLIC_DEFAULT_ANTHROPIC_SYSTEM_PROMPT | Defined in [constants file](./utils/app/const.ts)   | The default system prompt to use on new conversations for Anthropic models.                                                          |
 | No        | NEXT_PUBLIC_DEFAULT_PALM_SYSTEM_PROMPT      | Defined in [constants file](./utils/app/const.ts)   | The default system prompt to use on new conversations for PaLM 2 models.                                                             |
 | No        | NEXT_PUBLIC_DEFAULT_MODEL                   | `gpt-3.5-turbo`                                     | The default model to use on new conversations                                                                                        |

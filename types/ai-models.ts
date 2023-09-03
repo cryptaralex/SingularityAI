@@ -3,7 +3,7 @@ export interface AiModel {
   maxLength: number; // maximum length of a message
   tokenLimit: number;
   requestLimit: number;
-  vendor: 'SingularityAI' | 'Anthropic' | 'Google';
+  vendor: 'OpenAI' | 'Anthropic' | 'Google' | 'SingularityAI';
 }
 
 export interface PossibleAiModelsInterface {
@@ -16,35 +16,35 @@ export const PossibleAiModels: PossibleAiModelsInterface = {
     maxLength: 12000,
     tokenLimit: 4000,
     requestLimit: 3000,
-    vendor: 'SingularityAI',
+    vendor: 'OpenAI',
   },
   'gpt-35-az': {
     id: 'gpt-35-az',
     maxLength: 12000,
     tokenLimit: 4000,
     requestLimit: 3000,
-    vendor: 'SingularityAI',
+    vendor: 'OpenAI',
   },
   'gpt-4': {
     id: 'gpt-4',
     maxLength: 24000,
     tokenLimit: 8000,
     requestLimit: 6000,
-    vendor: 'SingularityAI',
+    vendor: 'OpenAI',
   },
   'gpt-4-32k': {
     id: 'gpt-4-32k',
     maxLength: 96000,
     tokenLimit: 32000,
     requestLimit: 30000,
-    vendor: 'SingularityAI',
+    vendor: 'OpenAI',
   },
   'gpt-35-turbo': {
     id: String(process.env.NEXT_PUBLIC_AZURE_DEPLOYMENT_ID),
     maxLength: 12000,
     tokenLimit: 4000,
     requestLimit: 3000,
-    vendor: 'SingularityAI',
+    vendor: 'OpenAI',
   },
   'claude-instant-1': {
     id: 'claude-instant-1',
@@ -65,7 +65,7 @@ export const PossibleAiModels: PossibleAiModelsInterface = {
     maxLength: 12000,
     tokenLimit: 4096,
     requestLimit: 3000,
-    vendor: 'SingularityAI',
+    vendor: 'OpenAI',
   },
   bard: {
     id: 'bard',

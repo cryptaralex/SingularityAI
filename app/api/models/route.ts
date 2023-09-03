@@ -2,7 +2,7 @@ import { DEBUG_MODE } from '@/utils/app/const';
 import { printEnvVariables } from '@/utils/app/debug/env-vars';
 import { getAvailableAnthropicModels } from '@/utils/server/ai_vendors/anthropic/getModels';
 import { getAvailablePalm2Models } from '@/utils/server/ai_vendors/google/getModels';
-import { getAvailableSingularityAIModels } from '@/utils/server/ai_vendors/openai/getModels';
+import { getAvailableOpenAIModels } from '@/utils/server/ai_vendors/openai/getModels';
 
 import { AiModel } from '@/types/ai-models';
 
@@ -23,9 +23,9 @@ const handler = async (req: Request): Promise<Response> => {
 
     const models: AiModel[] = [];
     const { error: openaiError, data: openaiModels } =
-      await getAvailableSingularityAIModels(openai_key);
+      await getAvailableOpenAIModels(openai_key);
     if (openaiError) {
-      console.error('Error getting SingularityAI models');
+      console.error('Error getting OpenAI models');
     } else {
       models.push(...(openaiModels as AiModel[]));
     }

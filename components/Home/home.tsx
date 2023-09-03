@@ -289,7 +289,7 @@ const Home = () => {
   };
 
   const generateBuiltInSystemPrompts = useCallback(() => {
-    const vendors: AiModel['vendor'][] = ['Anthropic', 'SingularityAI', 'Google'];
+    const vendors: AiModel['vendor'][] = ['Anthropic', 'OpenAI', 'Google', 'SingularityAI'];
 
     const newSystemPrompts: SystemPrompt[] = [];
     for (const vendor of vendors) {
@@ -306,13 +306,13 @@ const Home = () => {
             .map((m) => m.id),
         };
         newSystemPrompts.push(systemPrompt);
-      } else if (vendor === 'SingularityAI') {
+      } else if (vendor === 'OpenAI') {
         systemPrompt = {
           id: systemPromptId,
           name: `${vendor} Built-In`,
           content: DEFAULT_OPENAI_SYSTEM_PROMPT,
           folderId: null,
-          models: models.filter((m) => m.vendor === 'SingularityAI').map((m) => m.id),
+          models: models.filter((m) => m.vendor === 'OpenAI').map((m) => m.id),
         };
         newSystemPrompts.push(systemPrompt);
       } else if (vendor === 'Google') {

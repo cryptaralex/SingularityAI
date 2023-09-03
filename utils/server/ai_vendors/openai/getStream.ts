@@ -15,7 +15,7 @@ import {
   createParser,
 } from 'eventsource-parser';
 
-export async function streamSingularityAI(
+export async function streamOpenAI(
   model: AiModel,
   systemPrompt: string,
   temperature: number,
@@ -56,7 +56,7 @@ export async function streamSingularityAI(
       }),
       ...(OPENAI_API_TYPE === 'openai' &&
         OPENAI_ORGANIZATION && {
-          'SingularityAI-Organization': OPENAI_ORGANIZATION,
+          'OpenAI-Organization': OPENAI_ORGANIZATION,
         }),
     },
     method: 'POST',
@@ -84,7 +84,7 @@ export async function streamSingularityAI(
       return { error: result.error };
     } else {
       throw new Error(
-        `SingularityAI API returned an error: ${
+        `OpenAI API returned an error: ${
           decoder.decode(result?.value) || result.statusText
         }`,
       );

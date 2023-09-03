@@ -3,7 +3,7 @@ import { Message } from '@/types/chat';
 
 import { streamAnthropic } from './anthropic/getStream';
 import { streamPaLM2 } from './google/getStream';
-import { streamSingularityAI } from './openai/getStream';
+import { streamOpenAI } from './openai/getStream';
 
 export async function getStream(
   model: AiModel,
@@ -13,8 +13,8 @@ export async function getStream(
   messages: Message[],
   tokenCount: number,
 ) {
-  if (model.vendor === 'SingularityAI') {
-    return streamSingularityAI(
+  if (model.vendor === 'OpenAI') {
+    return streamOpenAI(
       model,
       systemPrompt,
       temperature,

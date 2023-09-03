@@ -43,14 +43,14 @@ export const ChatMessage: FC<Props> = memo(
       },
       dispatch: homeDispatch,
     } = useContext(HomeContext);
-    
+
     const [isEditing, setIsEditing] = useState<boolean>(false);
     const [isTyping, setIsTyping] = useState<boolean>(false);
     const [messageContent, setMessageContent] = useState(message.content);
     const [messagedCopied, setMessageCopied] = useState(false);
 
     const [authUrl, setAuthUrl] = useState<string | undefined>();
-  
+
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
     const toggleEditing = () => {
@@ -112,7 +112,6 @@ export const ChatMessage: FC<Props> = memo(
     };
 
     const handlePressEnter = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-      //console.log(token)
       if (e.key === 'Enter' && !isTyping && !e.shiftKey) {
         e.preventDefault();
         handleEditMessage();
@@ -153,7 +152,7 @@ export const ChatMessage: FC<Props> = memo(
       >
         <div className="group relative m-auto flex p-4 text-base md:max-w-2xl md:gap-6 md:py-6 lg:max-w-2xl lg:px-0 xl:max-w-3xl">
           <div className="min-w-[40px] text-right font-bold">
-            {message.role === 'assistant' && <img
+          {message.role === 'assistant' && <img
               src={'ophela.webp'} // Use message.picture here instead of IconUser/IconRobot
               alt=""
               width={40}
@@ -167,7 +166,7 @@ export const ChatMessage: FC<Props> = memo(
               height={40}
               style={{ borderRadius: "50%", objectFit: "cover" }}
         />}
-          </div>
+                  </div>
 
           <div className="prose mt-[-2px] w-full dark:prose-invert">
             {message.role === 'user' && (
